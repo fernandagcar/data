@@ -1,0 +1,56 @@
+#Importando bibliotecas
+
+import pandas as pd 
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+import plotly.express as px
+from sklearn import linear_model as lm
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.decomposition import PCA
+from sklearn import datasets
+from sklearn.metrics import r2_score
+from sklearn.ensemble import RandomForestClassifier
+from sklearn import model_selection as ms
+from sklearn.metrics import mean_squared_error
+from sklearn.cluster import KMeans
+from sklearn.metrics import accuracy_score
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import confusion_matrix
+from sklearn.cluster import AgglomerativeClustering, KMeans
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from scipy.cluster import hierarchy
+import geopandas
+
+#Ler arquivo
+def = pd.read_csv(".csv", sep=";")
+
+#Visualizar quantas linhas e colunas
+def.shape
+
+#Coluna index
+def.set_index('', inplace=True)
+
+#Visualizar tabela
+def.head()
+
+#Correlação
+def.corr()
+
+#Média, desvio, min e máx de cada coluna
+def.describe()
+
+#Visualizar lista de colunas
+list(def.columns)
+
+#Gráfico de dispersão multivariado
+
+def1 = def[['colunas']]
+sns.pairplot(def1, kind='reg', corner='True')
+
+#Heatmap
+
+fig, ax = plt.subplots(figsize=(20,8))
+_ = sns.heatmap(def1.corr(), cmap='inferno', linewidth=0.5, annot=True)
+
